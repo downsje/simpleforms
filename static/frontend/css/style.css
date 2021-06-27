@@ -1,0 +1,20 @@
+form#post-form {
+    margin: 50px 100px 100px;
+}
+select#id_subscription_type {
+    width: 178px;
+    height: 26px;
+}
+label {
+    width: 10%;
+}
+
+.gridList{
+    margin:50px 0 10px 0;
+    font-size:22px;
+}
+
+.jsgrid-header-row > .jsgrid-header-cell {
+    color: #337ab7;
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+
+{% load static %}
+<html class="no-js">
+<head>
+    <title>Sample form</title>
+    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'frontend/css/jsgrid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/jsgrid-theme.min.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'frontend/img/favicon.ico' %}">
+
+    <script src="{% static 'frontend/js/jquery-3.4.1.min.js' %}"></script>
+
+    <script src="{% static 'frontend/js/customer.js' %}"></script>
+    <script src="{% static 'frontend/js/jsgrid.min.js' %}"></script>
+
+</head>
+<form method="POST" id="post-form">
+    
+    <h3>Welcome to the Subscription Page</h3>
+  
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit" class="save btn btn-primary">Submit</button>
+    </div>
+    <div class="gridlist">List of Current Subscribers</div>
+    <div id="jsGrid"></div>
+</form>
+</html>
